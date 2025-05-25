@@ -52,17 +52,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php
-									while ($out = mysqli_fetch_assoc($result)) {
-										echo "
-												<tr>
-													<th>". $out['id'] ."</th>
-													<th>". $out['phone'] ."</th>
-													<th>". $out['admin'] ."</th>
-												</tr>
-										";
-									}
-								?>
+					
+								<tr>
+									<th> user.id </th>
+									<th> user.phone </th>
+									<th> user.status </th>
+								</tr>
+
 							</tbody>
 						</table>
 					</div>
