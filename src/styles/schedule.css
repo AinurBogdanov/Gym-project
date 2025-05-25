@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #f0f0f0;
+}
+caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.highlight {
+  background-color: #e0ffe0;
+}
+.table-cont {
+  width: 50%;
+  margin: 0 auto;
+}
