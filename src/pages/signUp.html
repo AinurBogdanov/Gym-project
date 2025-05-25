@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/header-footer.css">
+	<link rel="stylesheet" href="../styles/sign.css">
+
+	<title>Регистрация: ARENALIN</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<h2><a href="../../index.html">Adrenalin</a></h2>
+
+				<nav class="nav">
+					<a href="#" class="nav__link">Расписание</a>
+					<a href="./prices.html" class="nav__link">Цены</a>
+					<a href="./faq.html" class="nav__link">Faq</a>
+
+						<a href="#" class="nav__link">Регистрация</a>
+						<a href="./signIn.html" class="nav__link">Вход</a>
+						
+						<a href="#" class="nav__link">Выйти</a>
+						<a href="./admin.html" class="nav__link">Админка</a>
+				</nav>
+
+				<div class="header-number">
+					<span>+7 (888) 777 66 55</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container-5">
+			<div class="sign">
+				<div class="sign__inner">
+					<div class="sign-header">
+						<h2>Регистрация</h2>
+					</div>
+					<form action="include/check.php" method="post">
+						<div>
+							<label>Введите номер телефона</label>
+							<input type="tell" name="phone">
+						</div>
+						<div>
+							<label>Введите пароль</label>
+							<input type="password" name="password">
+						</div>
+						<button class="button" type="submit">Зарегистрироваться</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<h2><a href="index.php">Adrenalin</a></h2>
+
+				<div class="nav-footer">
+					<nav class="nav nav-footer__inner">
+						<a href="#" class="nav__link">Правила клуба</a>
+						<a href="#" class="nav__link">Оферта</a>
+						<a href="#" class="nav__link">Политика конфенденциальности</a>
+						<a href="#" class="nav__link">Согласие на обработку персональных данных</a>
+						<a href="#" class="nav__link">Реквизиты платежей</a>
+					</nav>
+					<nav class="nav nav-footer__inner">
+						<a href="#" class="nav__link">Личный кабинет</a>
+						<a href="#" class="nav__link">Расписание</a>
+						<a href="#" class="nav__link">Цены</a>
+						<a href="#" class="nav__link">Статьи</a>
+						<a href="#" class="nav__link">Контакты</a>
+					</nav>
+				</div>
+				
+				<div class="work-time">
+					<h2>Режим работы</h2>
+					<span>Пн-Пт: 7:00-23:00</span>
+					<span>Сб-Вс: 9:00-22:00</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

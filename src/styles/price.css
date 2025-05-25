@@ -1,0 +1,31 @@
+@import "root.css";
+
+/* Main */
+.main {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Title */
+.title {
+	width: 100%;
+	height: auto;
+}
+
+.title__inner {
+	margin-top: 50px;
+}
+
+.title__inner > h1 {
+	width: 550px;
+
+	text-transform: uppercase;
+	font-size: var(--gym--font_size--medium_bold-v2);
+	line-height: 1.1;
+	color: var(--gym--color_blue--00);
+}
+
+.faq {
+	margin-top: 30px;
+}

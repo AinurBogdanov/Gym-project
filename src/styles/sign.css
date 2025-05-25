@@ -1,0 +1,90 @@
+@import "root.css";
+
+/* Main */
+.main {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Sign */
+.sign {
+	width: 505px;
+	height: auto;
+
+	border-radius: 5px;
+	color: var(--gym--color_white--EE);
+	background-color: var(--gym--color_black--24);
+}
+
+.sign-header {
+	width: 100%;
+	height: 55px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.sign-header > h2 {
+	font-size: var(--gym--font_size--medium_bold-v1);
+	color: var(--gym--color_blue--00);
+}
+
+form {
+	padding: 0 30px 30px 30px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	gap: 10px;
+}
+
+form > div {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	gap: 5px;
+}
+
+form > div > label {
+	font-size: var(--gym--font_size--medium);
+	font-weight: 400;
+}
+
+input[type=tell], input[type=password] {
+	width: 100%;
+	height: 30px;
+	padding: 0 10px;
+
+	border: 2px solid var(--gym--color_white--EE);
+	border-radius: 5px;
+	font-size: var(--gym--font_size--small);
+	font-family: var(--gym--font_family);
+	font-weight: 400;
+	color: var(--gym--color_white--EE);
+	background-color: transparent;
+}
+
+input[type=tell]:focus, input[type=password]:focus {
+	outline: none;
+}
+
+.button {
+	width: 225px;
+	height: 50px;
+
+	cursor: pointer;
+	border: 2px solid var(--gym--color_white--EE);
+	border-radius: 5px;
+	font-size: var(--gym--font_size--medium);
+	font-family: var(--gym--font_family);
+	font-weight: 400;
+	color: var(--gym--color_white--EE);
+	background-color: transparent;
+	transition: border .1s ease, background .1s ease;
+}
+
+.button:hover {
+	border: 2px solid var(--gym--color_blue--00);
+	background-color: var(--gym--color_blue--00);
+}

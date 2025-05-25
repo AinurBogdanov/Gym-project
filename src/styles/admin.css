@@ -1,0 +1,52 @@
+@import "root.css";
+
+/* Main */
+.main {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Admin */
+.admin {
+	width: 100%;
+	height: auto;
+
+	border-radius: 5px;
+	color: var(--gym--color_white--EE);
+	background-color: var(--gym--color_black--24);
+}
+
+.admin-header {
+	width: 100%;
+	height: 55px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+
+.admin-header > h2 {
+	font-size: var(--gym--font_size--medium_bold-v1);
+	color: var(--gym--color_blue--00);
+}
+
+
+/* Admin main */
+.admin-main {
+	padding: 0 30px 30px 30px;
+}
+
+table {
+	width: 100%;
+	height: auto;
+	border: 2px solid var(--gym--color_white--EE);
+	border-radius: 5px;
+}
+
+table th {
+	padding: 5px 10px;
+	
+	border: 2px solid var(--gym--color_white--EE);
+	font-size: var(--gym--font_size--small);
+	font-weight: 400;
+}

@@ -1,0 +1,32 @@
+@import "root.css";
+
+body {
+	font-family: var(--gym--font_family);
+	font-weight: 600;
+	letter-spacing: .2px;
+	color: var(--gym--color_black--24);
+	background-color: var(--gym--color_white--F0);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	
+	box-sizing: border-box;
+}
+
+
+/* Container */
+.container {
+	width: 100%;
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+.container-5 {
+	width: 100%;
+	max-width: 505px;
+	margin: 0 auto;
+}
