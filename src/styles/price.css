@@ -29,3 +29,68 @@
 .faq {
 	margin-top: 30px;
 }
+
+.abo-cont {
+	margin: 40px 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px
+	/* justify-content: center; */
+}
+.abo-card {
+	max-width: 400px;
+	font-size: 20px;
+}
+.img-price {
+	height: 300px;
+	position: relative;
+}
+.abo-price {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: white;
+	z-index: 100;
+}
+.price {
+	font-size: 50px;
+}
+
+
+.img-price::after {
+	content: '';
+	display: block;
+	background: transparent;
+	background-image: linear-gradient(0deg, #3388d8, rgba(186, 34, 31, 0));
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+
+
+.abo-img {
+	width: 100%;
+	height: 100%;
+}
+
+.abo-descr {
+	list-style: none;	
+}
+.btn {
+	padding: 20px 0;
+	width: 90%;
+	color: white;
+	background-color: var(--gym--color_blue--00);
+	border: none;
+	border-radius: 5px;	
+	margin-top: 20px;
+}
+
+.btn:hover {
+	background-color: #1f72c0d0;
+}
+.btn:active {
+	background-color: var(--gym--color_blue--00);
+}
