@@ -6,8 +6,14 @@
 	height: auto;
 }
 
-
 /* Admin */
+.sign-admin {
+	display: flex;
+	justify-content: center;
+}
+.admin-page .sign {
+	margin-bottom: 50px;
+}
 .admin {
 	width: 100%;
 	height: auto;
@@ -33,20 +39,33 @@
 
 /* Admin main */
 .admin-main {
-	padding: 0 30px 30px 30px;
+	width: 100%;
+	min-height: 80vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+}
+.users-table,
+.orders-table {
+	padding: 10px;
+
 }
 
 table {
 	width: 100%;
-	height: auto;
-	border: 2px solid var(--gym--color_white--EE);
-	border-radius: 5px;
+}	
+
+table, td, tr, th {
+	border: 1px solid black
 }
 
-table th {
-	padding: 5px 10px;
-	
-	border: 2px solid var(--gym--color_white--EE);
-	font-size: var(--gym--font_size--small);
-	font-weight: 400;
+.btn-admin {
+	padding: 10px 20px;
+	background-color: var(--gym--color_blue--00);
+}
+.btn-admin:active {
+	background-color: rgb(28, 83, 172);
+}
+.invisble {
+	display: none;
 }
