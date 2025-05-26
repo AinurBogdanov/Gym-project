@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/header-footer.css">
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="./src/styles/base.css">
+    <link rel="stylesheet" href="./src/styles/header-footer.css">
+    <link rel="stylesheet" href="./src/styles/sign.css">
+    <link rel="stylesheet" href="./src/styles/admin.css">
 
 	<title>Админ: ARENALIN</title>
 </head>
@@ -17,15 +18,7 @@
 				<h2><a href="../../index.html">Adrenalin</a></h2>
 
 				<nav class="nav">
-					<a href="./schedule.html" class="nav__link">Расписание</a>
-					<a href="./prices.html" class="nav__link">Цены</a>
-					<a href="./faq.html" class="nav__link">Faq</a>
-
-					<a href="./signUp.html" class="nav__link">Регистрация</a>
-					<a href="./signIn.html" class="nav__link">Вход</a>
-					
-					<a href="#" class="nav__link">Выйти</a>
-					<a href="./admin.html" class="nav__link">Админка</a>
+					<a href="./index.html" class="nav__link">Выйти из страницы администрации</a>
 				</nav>
 
 				<div class="header-number">
@@ -37,10 +30,29 @@
 
 	<main class="main">
 		<div class="container-5">
-			<div class="admin">
+			<div class="sign">
+				<div class="sign__inner">
+					<div class="sign-header">
+						<h2>Войти</h2>
+					</div>
+					<form method="post">
+						<div>
+							<label>LOGIN</label>
+							<input type="tell" name="phone">
+						</div>
+						<div>
+							<label>PASSWORD</label>
+							<input type="password" name="password">
+						</div>
+						<button class="button" type="submit">Войти</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="admin" style="display: block;">
 				<div class="admin__inner">
 					<div class="admin-header">
-						<h2>Список пользователей</h2>
+						<h2>Список пользователей</h2> <button>Запросить</button>
 					</div>
 					<div class="admin-main">
 						<table>
