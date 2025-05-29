@@ -10,10 +10,10 @@ async function regUser(data) {
 }
 const data = {
   password: "123456",
-  phone_number: "+79041892739",
-  name: "Swwww"
+  phone_number: "+79241892739",
+  name: "ffgsgsfgww"
 }
 
 
 
-console.log(regUser(data))
+// console.log(regUser(data))

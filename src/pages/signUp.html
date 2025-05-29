@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</header>
-ы
+
 	<main class="main">
 		<div class="container-5">
 			<div class="sign">
@@ -42,14 +42,22 @@
 						<h2>Регистрация</h2>
 					</div>
 					
-					<form method="post">
+					<form id="regForm" method="post">
+						
+						
 						<div>
-							<label>Введите номер телефона</label>
-							<input type="tell" name="phone">
+							<label>Пароль</label>
+							<input type="text" name="password">
 						</div>
+
 						<div>
-							<label>Введите пароль</label>
-							<input type="password" name="password">
+							<label>Номер телефона</label>
+							<input type="tell" name="phone_number">
+						</div>
+	
+						<div>
+							<label>Имя</label>
+							<input type="text" name="name">
 						</div>
 						<button class="button" type="submit">Зарегистрироваться</button>
 					</form>
@@ -60,5 +68,6 @@
 	</main>
 
 	<script src="../scripts/main.js" type="module"></script>
+	<script src="../scripts/signUp/signUp.js" type="module"></script>
 </body>
 </html>
