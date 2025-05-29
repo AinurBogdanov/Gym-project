@@ -8,23 +8,26 @@ document.getElementById('regForm').addEventListener('submit',regUser)
   const data = {};
   for (let [key, value] of formData.entries()) {
     data[key] = value;
-    console.log(key, value); // Для отладки
   }
   
   try {
     const response = await fetch('http://localhost:8000/user/registration', {
       method: 'POST',
        headers: {
-        'Content-Type': 'application/json', // Критически важно!
+        'Content-Type': 'application/json', 
       },
       body: JSON.stringify(data)
     });
 
     const result = await response.json();
     
-    console.log('sex-ass', result);
-    alert('вы зарегестрированны')
+    if (result.Success === true ) {
+      alert('вы зарегестрированны'),
+      document.querySelectorAll('input').forEach((el) => {
+        el.value = '';
+      })
+    }
   } catch (error) {
-    console.error('ошибка блин', error);
+    alert('что-то не так с сервером')
   }
 }
