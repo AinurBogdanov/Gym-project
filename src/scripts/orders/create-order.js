@@ -1,5 +1,6 @@
 import { user } from '../data'
 import { order } from '../data'
+
 document.querySelectorAll('.js-order').forEach((el) => {
   el.addEventListener('click',sendOrder)
 })
@@ -13,9 +14,12 @@ async function sendOrder(event) {
     const orderName = event.currentTarget.dataset.orderId
     const phoneNumber = user.phone
 
-    console.log(phoneNumber)
+
+
+    console.log(orderName)
+    const cleanPhone = phoneNumber.replace(/\+/, '%2B');
       const url = `
-        http://localhost:8000/order/create_order?order=${orderName}&  phone_number=%2B${phoneNumber}
+      http://localhost:8000/order/create_order?order=${orderName}&phone_number=${cleanPhone}
       `;
 
     try {

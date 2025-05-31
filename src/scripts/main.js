@@ -5,4 +5,5 @@ function renderPage() {
   renderFooter();
   console.log('script works')
 }
+
 renderPage();

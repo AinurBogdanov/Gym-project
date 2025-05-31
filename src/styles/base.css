@@ -42,3 +42,7 @@ a {
 	width: 100vw;
 	max-width: 2500px;
 } */
+
+html .invisible {
+	display: none;
+}

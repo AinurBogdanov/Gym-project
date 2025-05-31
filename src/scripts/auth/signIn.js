@@ -32,9 +32,11 @@ document.getElementById('enterForm').addEventListener('submit',authUser)
       document.querySelectorAll('input').forEach((el) => {
         el.value = '';
       })
+    } else {
+      alert(result.Reason)
     }
   } catch (error) {
-    alert('что-то не так с сервером')
+    alert('что-то пошло не так')
     console.log(error)
   }
 }

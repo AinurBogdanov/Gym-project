@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" class="admin-page">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/header-footer.css">
+    <link rel="stylesheet" href="../styles/sign.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+
+	<title>Админ: ARENALIN</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<h2><a href="../../index.html">Adrenalin</a></h2>
+
+				<nav class="nav">
+					<a href="./index.html" class="nav__link">Выйти из страницы администрации</a>
+				</nav>
+
+				<div class="header-number">
+					<span>+7 (888) 777 66 55</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+
+		<div class="sign-admin">
+			<div class="sign">
+				<div class="sign__inner">
+					<div class="sign-header">
+						<h2>Войти</h2>
+					</div>
+					<form id="adminForm" method="post">
+						<div>
+							<label>NAME</label>
+							<input type="text" name="name">
+						</div>
+						<div>
+							<label>PASSWORD</label>
+							<input type="password" name="password">
+						</div>
+						<button class="button" type="submit">Войти</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="admin-main js-admin-main invisible">
+			<div class="users-table">
+				<button class="btn-admin get-users-btn-js">Get users</button>
+				<table class="table-users-js"> 
+					
+				</table>
+			</div>
+			<div class="orders-table">
+				<button class="btn-admin get-orders-btn-js">Get orders</button>
+				<table class="table-orders-js">
+				
+				</table>
+			</div>
+		</div>
+		
+	</main>
+	<script src="/src/scripts/admin/admin.js" type="module"></script>
+	<script src="/src/scripts/admin/lists.js" type="module"></script>
+</body>
+</html>
