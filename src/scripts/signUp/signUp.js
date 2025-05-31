@@ -1,8 +1,8 @@
 import { user } from "../data";
 
-document.getElementById('regForm').addEventListener('submit',regUser)
+document.getElementById('regForm').addEventListener('submit',regUser);
 
- async function regUser(e) {
+async function regUser(e) {
   e.preventDefault();
   
   const formData = new FormData(this);
@@ -35,7 +35,7 @@ document.getElementById('regForm').addEventListener('submit',regUser)
         el.value = '';
       })
     } else {
-      alert('какае-то ошибка')
+      alert('какае-то ошибка');
     }
 
 

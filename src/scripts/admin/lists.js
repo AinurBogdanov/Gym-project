@@ -1,8 +1,25 @@
 import { admin } from "./admin";
+import { formatTime } from "../time/formatTime.js"
 
 if (admin.isAdmin) {
   document.querySelector(".js-admin-main").classList.remove('invisible')
 }
+
+let usersHTML = `
+  <tr>
+    <th>User name</th>
+    <th>User phone</th>
+  </tr>
+`
+
+
+let ordersHTML = `
+	<tr>
+    <th>Plan</th>
+    <th>Expires at</th>
+    <th>User id</th>
+  </tr>
+`
 
 document.querySelector('.get-users-btn-js').addEventListener('click', renderUsers)
 document.querySelector('.get-orders-btn-js').addEventListener('click', renderOrders)
@@ -32,7 +49,7 @@ async function renderOrders() {
     ordersHTML += `
     <tr>
       <td>${order.name}</td>
-      <td>${order.expires_at}</td>
+      <td>${formatTime(order.expires_at)}</td>
       <td>${order.user_id}</td>
     </tr>`
   });
@@ -56,18 +73,3 @@ async function get(req) {
 
 
 
-let usersHTML = `
-  <tr>
-    <th>User name</th>
-    <th>User phone</th>
-  </tr>
-`
-
-
-let ordersHTML = `
-	<tr>
-    <th>Plan</th>
-    <th>Expires at</th>
-    <th>User id</th>
-  </tr>
-`

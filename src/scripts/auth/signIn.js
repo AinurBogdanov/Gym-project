@@ -41,7 +41,5 @@ document.getElementById('enterForm').addEventListener('submit',authUser)
   }
 }
 
-  // 12345678
-  // +79049009090
-  // Айнурчик
+
 

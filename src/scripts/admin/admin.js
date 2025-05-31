@@ -39,5 +39,3 @@ async function regAdmin(event) {
 
 
 }
-
-// console.log(regUser(data))
