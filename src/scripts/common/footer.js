@@ -7,15 +7,14 @@ const footerHTML = `
 
 				<div class="nav-footer">
 					<nav class="nav nav-footer__inner">
-          <a href="../../index.html" class="nav__link">Главная</a>
-          <a href="./schedule.html" class="nav__link">Расписание</a>
-          <a href="./prices.html" class="nav__link">Цены</a>
+						<a href="../../index.html" class="nav__link">Главная</a>
+						<a href="./schedule.html" class="nav__link">Расписание</a>
+						<a href="./prices.html" class="nav__link">Цены</a>
 					</nav>
 					<nav class="nav nav-footer__inner">
-          <a href="./faq.html" class="nav__link">Ответы на вопросы</a>
-          <a href="./signUp.html" class="nav__link">Регестрация</a>
-          <a href="./signIn.html" class="nav__link">Вход</a>
-
+						<a href="./faq.html" class="nav__link">Ответы на вопросы</a>
+						<a href="./signUp.html" class="nav__link">Регестрация</a>
+						<a href="./signIn.html" class="nav__link">Вход</a>
 					</nav>
           <nav class="nav nav-footer__inner">
             <span>Контакты:</span>

@@ -1,5 +1,8 @@
-async function regUser(data) {
-   const response = await fetch("http://localhost:8000/user/registration", {
+
+const data = {'name': 'admin1', 'password': 'admin_1_password'};
+
+async function regAdmin(data) {
+   const response = await fetch("http://localhost:8000/admin/verify", {
     method: "POST",
     headers: {
      'Content-Type': 'application/json',
@@ -8,12 +11,8 @@ async function regUser(data) {
   })
   return response
 }
-const data = {
-  password: "123456",
-  phone_number: "+79241892739",
-  name: "ffgsgsfgww"
-}
 
+regAdmin(data);
 
 
 // console.log(regUser(data))

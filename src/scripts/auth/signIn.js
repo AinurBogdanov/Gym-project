@@ -1,3 +1,5 @@
+import { user } from "../data";
+
 document.getElementById('enterForm').addEventListener('submit',authUser)
 
  async function authUser(e) {
@@ -21,17 +23,28 @@ document.getElementById('enterForm').addEventListener('submit',authUser)
 
     const result = await response.json();
     
-    if (result.Success === true ) {
+    if (result.success === true ) {
+      user.auth = true;
+      localStorage.setItem('userAuth',JSON.stringify(user))
+
       alert('вы вошли в аккаунт'),
+      console.log(user)
       document.querySelectorAll('input').forEach((el) => {
         el.value = '';
       })
     }
   } catch (error) {
     alert('что-то не так с сервером')
+    console.log(error)
   }
 }
 
   // 12345678
   // +79049009090
   // Айнурчик
+
+  // admins = [
+  //   {'name': 'admin1', 'password': 'admin_1_password'},
+  //   {'name': 'admin2', 'password': 'admin_2_password'},
+  //   {'name': 'admin3', 'password': 'admin_3_password'}
+  // ]
