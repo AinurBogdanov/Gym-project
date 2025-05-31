@@ -1,4 +1,3 @@
-const mainPath = '/src/pages/'
 const footerHTML = `
   <footer class="footer">
 		<div class="container">

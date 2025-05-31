@@ -36,7 +36,7 @@ async function sendOrder(event) {
       if (result.success === true) {
         order.name = orderName;
         localStorage.setItem('order', JSON.stringify(order));
-        alert('заказ сделан');
+        alert('заказ сделан ожидайте звонка');
       }
     } catch (error) {
       alert('что-то не так с сервером')

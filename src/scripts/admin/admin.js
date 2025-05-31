@@ -1,8 +1,4 @@
-
 export const admin = JSON.parse(localStorage.getItem('admin')) || {isAdmin: false};
-
-// const data = {'name': 'admin1', 'password': 'admin_1_password'};
-//форма получение данных
 
 document.getElementById('adminForm').addEventListener('submit', regAdmin)
 
@@ -20,22 +16,28 @@ async function regAdmin(event) {
     data[key] = value;
   }
 
-   console.log(data)
-   const response = await fetch("http://localhost:8000/admin/verify", {
-    method: "POST",
-    headers: {
-     'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  })
-  const result = await response.json();
-  if (result.success === true) {
-    admin.isAdmin = true;
-    localStorage.setItem('admin', JSON.stringify(admin))
-    alert("панель админа активна ")
+  try {
+      const response = await fetch("http://localhost:8000/admin/verify", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+    const result = await response.json();
+    if (result.success === true) {
+      admin.isAdmin = true;
+      localStorage.setItem('admin', JSON.stringify(admin))
+      document.querySelector(".js-admin-main").classList.remove('invisible')
+      alert("панель админа активна ")
+    } else {
+      alert('неверные данные')
+    }
+  } catch(error) {
+    console.log(error)
   }
+
+
 }
-
-
 
 // console.log(regUser(data))

@@ -34,7 +34,9 @@ document.getElementById('regForm').addEventListener('submit',regUser)
       document.querySelectorAll('input').forEach((el) => {
         el.value = '';
       })
-    } 
+    } else {
+      alert('какае-то ошибка')
+    }
 
 
   } catch (error) {

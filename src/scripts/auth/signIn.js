@@ -28,12 +28,12 @@ document.getElementById('enterForm').addEventListener('submit',authUser)
       localStorage.setItem('userAuth',JSON.stringify(user))
 
       alert('вы вошли в аккаунт'),
-      console.log(user)
       document.querySelectorAll('input').forEach((el) => {
         el.value = '';
       })
     } else {
-      alert(result.Reason)
+      alert('неверные данные')
+      console.log(result.Reason)
     }
   } catch (error) {
     alert('что-то пошло не так')
@@ -45,8 +45,3 @@ document.getElementById('enterForm').addEventListener('submit',authUser)
   // +79049009090
   // Айнурчик
 
-  // admins = [
-  //   {'name': 'admin1', 'password': 'admin_1_password'},
-  //   {'name': 'admin2', 'password': 'admin_2_password'},
-  //   {'name': 'admin3', 'password': 'admin_3_password'}
-  // ]

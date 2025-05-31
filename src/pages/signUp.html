@@ -45,17 +45,20 @@
 					<form id="regForm" method="post">
 						
 						<div>
-							<label>Пароль</label>
+							<label>Пароль (4 - 8)</label>
 							<input type="text" name="password">
 						</div>
 
 						<div>
-							<label>Номер телефона</label>
-							<input type="tell" name="phone_number">
+							<label>Номер телефона (+7)</label>
+							<input
+							type="tell" name="phone_number"
+							pattern="\+7\d{10}" 
+							>
 						</div>
 	
 						<div>
-							<label>Имя</label>
+							<label>Имя (2 - 15)</label>
 							<input type="text" name="name">
 						</div>
 						<button class="button" type="submit">Зарегистрироваться</button>

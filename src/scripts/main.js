@@ -1,9 +1,12 @@
 import { renderFooter } from "./common/footer";
-import './auth/admin.js'
+
+const mainPage = document.querySelector('html.main')
 
 function renderPage() {
-  renderFooter();
   console.log('script works')
+  if (!mainPage) {
+    renderFooter();
+  }
 }
 
 renderPage();
