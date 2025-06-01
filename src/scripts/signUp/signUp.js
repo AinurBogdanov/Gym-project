@@ -68,7 +68,7 @@ async function regUser(e) {
     
     if (result.success === true ) {
       user.auth = true;
-      user.phone = data.phone_number;
+      user.phone_number = data.phone_number;
 
       localStorage.setItem('userAuth', JSON.stringify(user))
 
