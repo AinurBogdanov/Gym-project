@@ -12,11 +12,11 @@ async function sendOrder(event) {
   }
   if (user.auth) {
     const orderName = event.currentTarget.dataset.orderId
-    const phoneNumber = user.phone
+    const phoneNumber = user.phone_number
 
 
 
-    console.log(orderName)
+    console.log(phoneNumber);
     const cleanPhone = phoneNumber.replace(/\+/, '%2B');
       const url = `
       http://localhost:8000/order/create_order?order=${orderName}&phone_number=${cleanPhone}
@@ -43,5 +43,6 @@ async function sendOrder(event) {
     }
   } else {
     alert('войдите в аккаунт')
+    window.location.href = 'http://localhost:5173/src/pages/signIn.html';
   }
 }

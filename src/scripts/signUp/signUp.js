@@ -1,6 +1,10 @@
 import { user } from "../data";
+import { isPasswordVal } from "../common/validation"
+import { isNumberVal } from "../common/validation"
 
-document.getElementById('regForm').addEventListener('submit',regUser);
+if (document.querySelector('html.sign-up')) { 
+  document.getElementById('regForm').addEventListener('submit',regUser);
+}
 
 let isValid = true;
 
@@ -19,9 +23,7 @@ async function regUser(e) {
     data[key] = value;
   }
 
-
-
-   if (!/^\d{4,10}$/.test(data.password)) {
+   if (!isPasswordVal(data.password)) {
     document.getElementById('passwordError').innerText = "*пароль должен быть от 4 до 10 цифр";
     isValid = false;
   } else {
@@ -29,20 +31,18 @@ async function regUser(e) {
     document.getElementById('passwordError').innerText = "";
   }
 
+  const isNumVal = isNumberVal(data.phone_number);
 
-  const phone =  data.phone_number.replace(/\s+/g, ""); 
-  const onlyDigits = phone.replace(/\D/g, '');
+  if (!isNumVal) {
+     isValid = false;
+    document.getElementById('phoneError').innerText = "*не валидный номер"
+  } else {
+    isValid = true;
+    document.getElementById('phoneError').innerText = ""
+  }
 
-  if (!phone.startsWith('+7') || !/^\d{11}$/.test(onlyDigits)) {
-  console.log(phone)
-  isValid = false;
-  document.getElementById('phoneError').innerText = "*номер телофона должен начинаться с (+7) и содержать 11 цифр"
- } else {
-  isValid = true;
-  document.getElementById('phoneError').innerText = ""
- }
 
- if (!/^[A-Za-zА-Яа-яЁё]+$/.test(data.name) || /\s/.test(data.name)) {
+   if (!/^[A-Za-zА-Яа-яЁё]+$/.test(data.name) || /\s/.test(data.name)) {
    isValid = false;
    document.getElementById('nameError').innerText = "*имя должно содержать только буквы без цифр и пробелов"
  } else { 
@@ -50,7 +50,6 @@ async function regUser(e) {
   document.getElementById('nameError').innerText = '';
  }
 
-  
  data.phone_number = data.phone_number.replace(/ /g, "");
 
   if (!isValid) {

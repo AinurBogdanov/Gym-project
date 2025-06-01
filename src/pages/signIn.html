@@ -45,11 +45,13 @@
 					<form method="post" id="enterForm">
 						<div>
 							<label>Введите номер телефона (+7)</label>
-							<input type="tell" name="phone_number" pattern="\+7\d{10}" >
+							<input type="tell" name="phone_number" >
+							<span class="number-error" style="color: red"></span>
 						</div>
 						<div>
 							<label>Введите пароль</label>
 							<input type="password" name="password">
+							<span class="password-error" style="color: red"></span>
 						</div>
 						<button class="button" type="submit">Войти</button>
 					</form>
