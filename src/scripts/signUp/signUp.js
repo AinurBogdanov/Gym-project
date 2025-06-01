@@ -2,7 +2,13 @@ import { user } from "../data";
 
 document.getElementById('regForm').addEventListener('submit',regUser);
 
+let isValid = true;
+
 async function regUser(e) {
+  if(user.auth === true) {
+    alert('Профиль активен')
+    return
+  }
   e.preventDefault();
   
   const formData = new FormData(this);
@@ -13,6 +19,43 @@ async function regUser(e) {
     data[key] = value;
   }
 
+
+
+   if (!/^\d{4,10}$/.test(data.password)) {
+    document.getElementById('passwordError').innerText = "*пароль должен быть от 4 до 10 цифр";
+    isValid = false;
+  } else {
+    isValid = true;
+    document.getElementById('passwordError').innerText = "";
+  }
+
+
+  const phone =  data.phone_number.replace(/\s+/g, ""); 
+  const onlyDigits = phone.replace(/\D/g, '');
+
+  if (!phone.startsWith('+7') || !/^\d{11}$/.test(onlyDigits)) {
+  console.log(phone)
+  isValid = false;
+  document.getElementById('phoneError').innerText = "*номер телофона должен начинаться с (+7) и содержать 11 цифр"
+ } else {
+  isValid = true;
+  document.getElementById('phoneError').innerText = ""
+ }
+
+ if (!/^[A-Za-zА-Яа-яЁё]+$/.test(data.name) || /\s/.test(data.name)) {
+   isValid = false;
+   document.getElementById('nameError').innerText = "*имя должно содержать только буквы без цифр и пробелов"
+ } else { 
+  isValid = true;
+  document.getElementById('nameError').innerText = '';
+ }
+
+  
+ data.phone_number = data.phone_number.replace(/ /g, "");
+
+  if (!isValid) {
+    return
+  }
   try {
     const response = await fetch('http://localhost:8000/user/registration', {
       method: 'POST',
@@ -34,8 +77,8 @@ async function regUser(e) {
       document.querySelectorAll('input').forEach((el) => {
         el.value = '';
       })
-    } else {
-      alert('какае-то ошибка');
+    } else if (response.status === 400){
+      alert(`ошибка: 400: ${JSON.stringify(result)}`);
     }
 
 

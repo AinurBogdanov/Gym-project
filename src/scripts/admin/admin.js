@@ -1,5 +1,7 @@
 export const admin = JSON.parse(localStorage.getItem('admin')) || {isAdmin: false};
 
+//  {'name': 'admin1', 'password': 'admin_1_password'},
+
 document.getElementById('adminForm').addEventListener('submit', regAdmin)
 
 async function regAdmin(event) {
